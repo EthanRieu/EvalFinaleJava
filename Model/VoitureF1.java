@@ -1,16 +1,24 @@
 package Model;
 
-public class VoitureF1 extends Vehicule {
+public class VoitureF1 {
+    private String modele;
     private Pilote pilote;
 
     public VoitureF1(String modele, Pilote pilote) {
-        super(modele);
+        this.modele = modele;
         this.pilote = pilote;
     }
 
-    @Override
+    public String getModele() {
+        return modele;
+    }
+
+    public Pilote getPilote() {
+        return pilote;
+    }
+
     public void afficherDetails() {
-        System.out.println("Voiture F1 - Modèle: " + getModele());
+        System.out.println("Voiture F1 - Modèle: " + modele);
         System.out.println("Pilote: " + pilote.getPrenom() + " " + pilote.getNom());
     }
 }
